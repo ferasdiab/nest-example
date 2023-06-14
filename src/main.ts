@@ -6,15 +6,6 @@ import { TasksModule } from './tasks/tasks.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
-  // const config = new DocumentBuilder()
-  //   .setTitle('Hayyak core')
-  //   .setDescription('The Hayyak core API description')
-  //   .setVersion('1.0')
-  //   .addTag('API')
-  //   .build();
-  // const document = SwaggerModule.createDocument(app, config);
-  // SwaggerModule.setup('api', app, document);
   const tasksConfig = new DocumentBuilder()
     .setTitle('Tasks API')
     .setDescription('The API description for the Tasks module')
