@@ -17,6 +17,6 @@ export class UserController {
 
   @Get()
   getUsers() {
-    return [];
+    return this.UserService.getUsers()
   }
 }

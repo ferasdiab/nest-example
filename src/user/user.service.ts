@@ -21,4 +21,11 @@ export class UserService {
     });
     return deletedUser;
   }
+
+  async getUsers() {
+    const users = await this.prisma.user.findMany({
+      include: { Task: true }, // Include the associated Task for deletion
+    });
+    return users;
+  }
 }
