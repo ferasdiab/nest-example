@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsInt } from 'class-validator';
+import { IsNotEmpty, IsString } from 'class-validator';
 import { ApiProperty, ApiBody } from '@nestjs/swagger';
 
 export class CreateTaskDTO {
@@ -7,6 +7,6 @@ export class CreateTaskDTO {
   name: string;
 
   @IsNotEmpty()
-  @IsInt()
+  @IsString()
   assineeId: string;
 }
