@@ -6,7 +6,5 @@ export class CreateTaskDTO {
   @IsNotEmpty()
   name: string;
 
-  @IsNotEmpty()
-  @IsString()
   assineeId: string;
 }
