@@ -13,4 +13,12 @@ export class UserService {
 
     return newUser;
   }
+
+  async deleteUser(id: string) {
+    const deletedUser = await this.prisma.user.delete({
+      where: { id: id },
+      include: { Task: true }, // Include the associated Task for deletion
+    });
+    return deletedUser;
+  }
 }

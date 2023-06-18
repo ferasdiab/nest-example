@@ -10,6 +10,11 @@ export class UserController {
     return this.UserService.createUser(CreateUserDTO);
   }
 
+  @Delete('/:id')
+  deleteUser(@Param('id') id: string) {
+    return this.UserService.deleteUser(id);
+  }
+
   @Get()
   getUsers() {
     return [];
