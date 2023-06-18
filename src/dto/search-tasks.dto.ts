@@ -1,5 +1,5 @@
 import { Status } from '../tasks/taskModel';
-import { ApiProperty , ApiBody } from '@nestjs/swagger';
+import { ApiProperty, ApiBody } from '@nestjs/swagger';
 
 export class SearchTasks {
   @ApiProperty({ required: false, description: 'name of  task' })
@@ -12,5 +12,5 @@ export class SearchTasks {
   })
   status: Status;
 
-  assineeId: number;
+  assineeId: string;
 }

@@ -8,18 +8,18 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
+  id    String  @id @default(uuid())
   email String  @unique
   name  String?
   Task  Task[]
 }
 
 model Task {
-  id        String @id @default(uuid())
+  id        String  @id @default(uuid())
   name      String
   status    Status
-  assinee   User?  @relation(fields: [assineeId], references: [id])
-  assineeId Int?
+  assinee   User?   @relation(fields: [assineeId], references: [id])
+  assineeId String?
 }
 
 enum Status {

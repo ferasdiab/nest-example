@@ -1,12 +1,12 @@
-import { IsNotEmpty, IsInt } from 'class-validator';
+import { IsNotEmpty, IsEmail } from 'class-validator';
 import { ApiProperty, ApiBody } from '@nestjs/swagger';
 
-export class CreateTaskDTO {
+export class CreateUserDTO {
   @ApiProperty({ required: false, description: 'name of  task' })
   @IsNotEmpty()
-  name: string;
+  @IsEmail()
+  email: string;
 
   @IsNotEmpty()
-  @IsInt()
-  assineeId: string;
+  name: string;
 }

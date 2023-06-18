@@ -20,7 +20,7 @@ export class TasksService {
     }
 
     if (searchTasks.assineeId) {
-      taskFilters.assineeId = +searchTasks.assineeId;
+      taskFilters.assineeId = searchTasks.assineeId;
     }
     return this.prisma.task.findMany({
       where: taskFilters,
